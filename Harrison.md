@@ -4,4 +4,4 @@ but the search is carried out by continuously narrowing the interval.
 I haven't fully figured it out yet, it will take time to learn later.
 
 Think2:
-11/6：今天写了四道简单的数组题，数组是最简单的数据结构，比较容易。
+10/6/2023：今天写了四道简单的数组题，数组是最简单的数据结构，比较容易。
