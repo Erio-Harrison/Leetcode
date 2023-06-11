@@ -6,7 +6,7 @@ package problems;
     C can be placed before D (500) and M (1000) to make 400 and 900.
  */
 
-public class Q0012IntegerToRoman {
+public class Lee12 {
     public String intToRoman(int num) {
         StringBuilder builder = new StringBuilder();
         builder.append(intToRomanDigit(num / 1000, "M", "Z", "Z"));
