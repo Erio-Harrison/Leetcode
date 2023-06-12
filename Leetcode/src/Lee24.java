@@ -15,14 +15,37 @@ public class Lee24 {
         }
 
         // Nodes to be swapped
-        ListNode firstNode = head;
         ListNode secondNode = head.next;
 
         // Swapping
-        firstNode.next = swapPairs(secondNode.next);
-        secondNode.next = firstNode;
+        head.next = swapPairs(secondNode.next);
+        secondNode.next = head;
 
         // Return new head node
         return secondNode;
+    }
+    public ListNode swapPairs1(ListNode head) {
+        // Creating dummy node
+        ListNode dummy = new ListNode(-1);
+        // Point the next of dummy node to the head
+        dummy.next = head;
+        // Creating a pointer to track the pair of nodes
+        ListNode point = dummy;
+
+        while (point.next != null && point.next.next != null) {
+            // Initializing first node of pair
+            ListNode firstNode = point.next;
+            // Initializing second node of pair
+            ListNode secondNode = point.next.next;
+
+            // Swapping the nodes
+            firstNode.next = secondNode.next;
+            point.next = secondNode;
+            secondNode.next = firstNode;
+
+            // Updating the pointer to the next pair
+            point = firstNode;
+        }
+        return dummy.next;
     }
 }
