@@ -19,3 +19,8 @@ I haven't fully figured it out yet, it will take time to learn later.
 变量 dummy 持有这个reference，它指向heap内存中的实际 ListNode 对象。
 
 在 Java 中，所有局部变量及其各自的对象reference都存储在heap内存中，而reference指向的实际对象存储在stack内存中。
+
+想法三：
+13/6/2023：
+关于19 removeNthFromEnd：注意：point2.next=point2.next.next;
+这里是在修改point2.next这个对象的值，而不是在修改reference。
