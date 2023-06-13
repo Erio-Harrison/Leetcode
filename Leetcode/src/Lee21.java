@@ -33,7 +33,6 @@ public class Lee21 {
         } else {
             prev.next = l2;
         }
-
         return head.next;
     }
     public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
