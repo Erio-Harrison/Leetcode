@@ -10,7 +10,6 @@ public class Lee160 {
           }
       }
 
-
       public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             ListNode point1=headA;
             ListNode point2=headB;
