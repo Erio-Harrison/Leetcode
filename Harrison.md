@@ -24,3 +24,16 @@ I haven't fully figured it out yet, it will take time to learn later.
 13/6/2023：
 关于19 removeNthFromEnd：注意：point2.next=point2.next.next;
 这里是在修改point2.next这个对象的值，而不是在修改reference。
+
+想法四：
+Lee328和Lee92结合可以吃透reference 和heap stack的关系：
+
+Node a = new Node(1);
+Node b = a;  // b and a are now pointing to the same object in memory
+
+b.val = 2;   // we modify the object itself
+System.out.println(a.val); // prints "2", because a and b refer to the same object
+
+Node c = new Node(3);
+b = c;       // we change the reference, not modifying the object itself
+System.out.println(a.val); // still prints "2", because a is still pointing to the original object
