@@ -40,19 +40,16 @@ b = c;       // we change the reference, not modifying the object itself
 System.out.println(a.val); // still prints "2", because a is still pointing to the original object
 
 案例2：
-// create two nodes
+
 ListNode node1 = new ListNode(1);
 ListNode node2 = new ListNode(2);
 
-// two references to the same node
 ListNode ref1 = node1;
 ListNode ref2 = ref1;
 
-// if we change the node's data through ref1, the change is visible through ref2
 ref1.val = 3;
 System.out.println(ref2.val);  // prints "3"
 
-// but if we change what ref1 points to, ref2 is not affected
 ref1 = node2;
 System.out.println(ref1.val);  // prints "2"
 System.out.println(ref2.val);  // still prints "3", because ref2 still points to the original node

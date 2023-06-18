@@ -23,7 +23,7 @@ public class Lee328{
         }
 
         odd.next=evenPoint;
-        return odd;
+        return head;
     }
 
 }
