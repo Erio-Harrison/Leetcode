@@ -5,8 +5,10 @@ I haven't fully figured it out yet, it will take time to learn later.
 
 想法二:
 10/6/2023：今天写了四道简单的数组题，数组是最简单的数据结构，比较容易。
+------------------------------------------------------------------
+数据结构之链表：
 
-想法三：
+想法：
 12/6/2023：关于21. Merge Two Sorted Lists和24. Swap Nodes in Pairs很像
 目前会两种解法：recursion 和 虚拟头+指针，第二种需要再熟悉熟悉。
 12/6/2023:
@@ -20,12 +22,12 @@ I haven't fully figured it out yet, it will take time to learn later.
 
 在 Java 中，所有局部变量及其各自的对象reference都存储在heap内存中，而reference指向的实际对象存储在stack内存中。
 
-想法三：
+想法：
 13/6/2023：
 关于19 removeNthFromEnd：注意：point2.next=point2.next.next;
 这里是在修改point2.next这个对象的值，而不是在修改reference。
 
-想法四：
+想法：
 Lee328和Lee92结合可以吃透reference 和heap stack的关系：
 
 案例1：
@@ -53,3 +55,5 @@ System.out.println(ref2.val);  // prints "3"
 ref1 = node2;
 System.out.println(ref1.val);  // prints "2"
 System.out.println(ref2.val);  // still prints "3", because ref2 still points to the original node
+-----------------------------------------------------------------
+数据结构之栈
