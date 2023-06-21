@@ -28,13 +28,11 @@ public class Lee2 {
             return l1;
         }
 
-        int sum;
         int carry=0;
-
         ListNode dummy = new ListNode(0);
-        ListNode curr = dummy;
-        while(l1!=null || l2!=null || carry>0){
-            sum=0;
+        ListNode cur=dummy;
+        while(l1!=null||l2!=null||carry>0){
+            int sum=0;
             if(l1!=null){
                 sum+=l1.val;
                 l1=l1.next;
@@ -44,11 +42,11 @@ public class Lee2 {
                 l2=l2.next;
             }
             sum+=carry;
-            carry = sum/10;
-            curr.next = new ListNode(sum%10);
-            curr = curr.next;
+            carry=sum/10;
+            cur.next=new ListNode(sum%10);
+            cur=cur.next;
         }
-        curr.next=null;
+        cur.next=null;
         return dummy.next;
     }
 }
