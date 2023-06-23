@@ -1,10 +1,3 @@
-Think1：
-Regarding the fourth question, we need to use binary search. What is used here is not the usual dichotomy, 
-but the search is carried out by continuously narrowing the interval. 
-I haven't fully figured it out yet, it will take time to learn later.
-
-想法二:
-10/6/2023：今天写了四道简单的数组题，数组是最简单的数据结构，比较容易。
 ------------------------------------------------------------------
 数据结构之链表：
 
@@ -56,4 +49,6 @@ ref1 = node2;
 System.out.println(ref1.val);  // prints "2"
 System.out.println(ref2.val);  // still prints "3", because ref2 still points to the original node
 -----------------------------------------------------------------
-数据结构之栈
+数据结构之栈：
+
+
