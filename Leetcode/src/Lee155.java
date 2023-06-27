@@ -3,10 +3,13 @@ package src;
 import java.util.Stack;
 
 class Lee155{
-    private Stack<Integer> stack = new Stack<>();
-    private Stack<Integer> minStack = new Stack<>();
+    private Stack<Integer> stack;
+    private Stack<Integer> minStack;
 
-    public void MinStack() { }
+    public void MinStack() {
+        stack = new Stack<>();
+        minStack = new Stack<>();
+    }
 
     public void push(int val) {
         stack.push(val);
