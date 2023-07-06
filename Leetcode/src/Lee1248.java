@@ -1,21 +1,25 @@
 package src;
 
 public class Lee1248 {
-    public int numberOfSubarrays(int[] nums, int k) {
+    public static int numberOfSubarrays(int[] nums, int k) {
         int n = nums.length;
         int[] count = new int[n + 1];
         int odd = 0, result = 0;
 
-        count[0] = 1; // This is to take care of the array starting with k odd numbers
+        count[0] = 1;
 
-        for (int num : nums) {
-            odd += num % 2;  // Increment odd counter if nums[i] is odd
+        for (int i = 0; i < n; i++) {
+            odd += nums[i] % 2;
             if (odd >= k) {
-                result += count[odd - k]; // Add the count of sub-arrays that has exactly k odd numbers.
+                result += count[odd - k];
             }
             count[odd]++;
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(numberOfSubarrays(new int[]{1,1,2,1,1,1},3));
     }
 }
