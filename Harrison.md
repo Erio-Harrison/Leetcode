@@ -49,6 +49,18 @@ ref1 = node2;
 System.out.println(ref1.val);  // prints "2"
 System.out.println(ref2.val);  // still prints "3", because ref2 still points to the original node
 -----------------------------------------------------------------
-数据结构之栈：
+双端队列：
+Deque表示双端队列。双端队列是在两端都可以进行插入和删除的队列。
 
+常用方法：
 
+新建一个双端队列：Deque<Character> deque = new LinkedList<Character>();
+判断是否为空： deque.isEmpty()
+增：deque.offerFirst()， deque.offerLast();//从头添加和尾部添加
+删：deque.pollFirst()， deque.pollLast()//从头添加和尾部出队
+查：deque.peekFirst(), deque.peekLast()//查看头添加和尾部元素
+高级用法：
+
+deque.removeFirstOccurrence()
+deque.removeLastOccurrence()
+分别代表删除第一次出现的该元素和最后一次出现的该元素，返回true则执行成功否则失败。
