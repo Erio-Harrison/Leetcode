@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Lee3 {
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
         if (s.length() == 0) return 0;
 
         Set<Character> set = new HashSet<>();
@@ -24,5 +24,9 @@ public class Lee3 {
             }
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcbde"));
     }
 }

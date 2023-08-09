@@ -17,21 +17,16 @@ public class Lee239 {
                 deque.pollFirst();
             }
 
-            // Remove indices of elements less than the current one
-            // This ensures the deque's first index always points to the max element
             while (!deque.isEmpty() && nums[deque.peekLast()] < nums[i]) {
                 deque.pollLast();
             }
 
             deque.offerLast(i);
-
-            // The first element in the deque is the max of the current window,
-            // add it to the result array
+            
             if (i >= k - 1) {
                 result[i - k + 1] = nums[deque.peekFirst()];
             }
         }
-
         return result;
     }
 }
