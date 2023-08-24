@@ -2,6 +2,7 @@ package src;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.TreeMap;
 
 public class Lee239 {
     public static int[] maxSlidingWindow(int[] nums, int k) {
@@ -29,6 +30,33 @@ public class Lee239 {
             // add it to the result array
             if (i >= k - 1) {
                 result[i - k + 1] = nums[deque.peekFirst()];
+            }
+        }
+
+        return result;
+    }
+
+    public static int[] maxSlidingWindow1(int[] nums, int k) {
+        if (nums == null || nums.length == 0) return new int[0];
+
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        int[] result = new int[nums.length - k + 1];
+
+        for (int i = 0; i < nums.length; i++) {
+            // If the left end of the window has moved past an element, remove it
+            if (i >= k) {
+                treeMap.put(nums[i - k], treeMap.get(nums[i - k]) - 1);
+                if (treeMap.get(nums[i - k]) == 0) {
+                    treeMap.remove(nums[i - k]);
+                }
+            }
+
+            // Add the current number to the TreeMap
+            treeMap.put(nums[i], treeMap.getOrDefault(nums[i], 0) + 1);
+
+            // If we've filled the first window, record the max
+            if (i >= k - 1) {
+                result[i - k + 1] = treeMap.lastKey();
             }
         }
 
