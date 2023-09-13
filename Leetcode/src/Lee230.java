@@ -24,7 +24,7 @@ public class Lee230 {
             return -1;
         }
         findHelper(root,list);
-        return list.get(list.size()-k+1);
+        return list.get(k-1);
     }
 
     public void findHelper(TreeNode root,List<Integer> list){
